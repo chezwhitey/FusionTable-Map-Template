@@ -153,11 +153,20 @@
         self.whereClause = self.locationColumn + " not equal to ''";
         
         //-----custom filters-----
-        var type_column = "'type'";
+        var type_column = "";
+        if ( $("#select_type").val() != "") { 
+            type_column = $("#select_type").val() + "Levels"
+            
+            if ( $("#rbType1").is(':checked')) self.whereClause += " AND " + type_column + "=Residential";
+            if ( $("#rbType2").is(':checked')) self.whereClause += " AND " + type_column + "=IOP";
+            if ( $("#rbType3").is(':checked')) self.whereClause += " AND " + type_column + "=OP";
+            if ( $("#rbType3").is(':checked')) self.whereClause += " AND " + type_column + "=ALL";
 
-        if ( $("#rbType1").is(':checked')) self.whereClause += " AND " + type_column + "=1";
-        if ( $("#rbType2").is(':checked')) self.whereClause += " AND " + type_column + "=2";
-        if ( $("#rbType3").is(':checked')) self.whereClause += " AND " + type_column + "=3";
+//            self.whereClause += " AND 'type' = '" + $("#select_type").val() + "'";
+
+        }    
+//        if ( $("#select_type").val() != "") 
+//          self.whereClause += " AND 'type' = '" + $("#select_type").val() + "'";
         
         //-----end of custom filters-----
 
