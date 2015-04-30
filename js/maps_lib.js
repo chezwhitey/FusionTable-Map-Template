@@ -153,20 +153,16 @@
         self.whereClause = self.locationColumn + " not equal to ''";
         
         //-----custom filters-----
-        var type_column = "";
+        var insurer_levels = "";
         if ( $("#select_type").val() != "") { 
-            type_column = $("#select_type").val() + "Levels"
+            insurer_levels = $("#select_type").val()
             
-            if ( $("#rbType1").is(':checked')) self.whereClause += " AND " + type_column + "=Residential";
-            if ( $("#rbType2").is(':checked')) self.whereClause += " AND " + type_column + "=IOP";
-            if ( $("#rbType3").is(':checked')) self.whereClause += " AND " + type_column + "=OP";
-            if ( $("#rbType3").is(':checked')) self.whereClause += " AND " + type_column + "=ALL";
-
-//            self.whereClause += " AND 'type' = '" + $("#select_type").val() + "'";
+            if ( $("#rbType1").is(':checked')) self.whereClause += " AND " + insurer_levels + "= 'Residential'";
+            if ( $("#rbType2").is(':checked')) self.whereClause += " AND " + insurer_levels + "= 'IOP'";
+            if ( $("#rbType3").is(':checked')) self.whereClause += " AND " + insurer_levels + "= 'OP'";
+            if ( $("#rbType4").is(':checked')) self.whereClause += " AND " + insurer_levels + "= 'All'";
 
         }    
-//        if ( $("#select_type").val() != "") 
-//          self.whereClause += " AND 'type' = '" + $("#select_type").val() + "'";
         
         //-----end of custom filters-----
 

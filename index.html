@@ -52,6 +52,8 @@
                   <option value='805'>1/2 mile</option>
                   <option value='1610'>1 mile</option>
                   <option value='3220'>2 miles</option>
+                  <option value='8050'>5 miles</option>
+                  <option value='16100'>10 miles</option>
                 </select>
               </label>
             </p>
@@ -63,17 +65,17 @@
             <label>
               <select id='select_type'>
                 <option value=''>Insurer</option>
-                <option value='Aetna '>Aetna</option>
-                <option value='BCBS'>BCBS</option>
-                <option value='Cigna-HealthSpring'>Cigna-HealthSpring</option>
-                <option value='CCAI'>CCAI</option>
-                <option value='CountyCare'>CountyCare</option>
-                <option value='Health Alliance Connect'>Health Alliance Connect</option>
-                <option value='Humana'>Humana</option>
-                <option value='IlliniCare'>IlliniCare</option>
-                <option value='Meridian'>Meridian</option>
-                <option value='Molina'>Molina</option>
-                <option value='Other'>Other</option>
+                <option value="'AetnaLevels'">Aetna</option>
+                <option value='BCBSLevels'>BCBS</option>
+                <option value='CignaLevels-HealthSpringLevels'>Cigna-HealthSpring</option>
+                <option value='CCAILevels'>CCAI</option>
+                <option value='CountyCareLevels'>CountyCare</option>
+                <option value='HealthAllianceConnectLevels'>Health Alliance Connect</option>
+                <option value='HumanaLevels'>Humana</option>
+                <option value='IlliniCareLevels'>IlliniCare</option>
+                <option value='MeridianLevels'>Meridian</option>
+                <option value='MolinaLevels'>Molina</option>
+                <option value='OtherLevels'>Other</option>
               </select>
             </label>      
 
@@ -156,8 +158,9 @@
         $(function() {
           var myMap = new MapsLib({
             fusionTableId:      "1WotvAIHo8d_XaNx-7WTMqIOyr8aRbkOZX0Mz9KC-",
-            googleApiKey:       "IzaSyCDNfIfT-qeDOxjkutyPTgAxf-yRBdQd50",
-            locationColumn:     "Full Address",
+            //fusionTableId:      "1l0sjG9t0AvdATL9xxuHxHtvHRoNLnRMwaWFGsJsn",
+            googleApiKey:       "AIzaSyAP_eLp19O3ihapPjFYdxEB3B51ZCXD8_s",
+            locationColumn:     "'Full Address'",
             map_center:         [41.8781136, -87.66677856445312],
             locationScope:      "",
           });
