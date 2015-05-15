@@ -154,14 +154,16 @@
         self.whereClause = self.locationColumn + " not equal to ''";
         
         //-----custom filters-----
-        var insurer_levels = "";
-        if ( $("#select_type").val() != "") { 
-            insurer_levels = $("#select_type").val()
-            
-            if ( $("#rbType1").is(':checked')) self.whereClause += " AND " + insurer_levels + "= 'Residential'";
-            if ( $("#rbType2").is(':checked')) self.whereClause += " AND " + insurer_levels + "= 'IOP'";
-            if ( $("#rbType3").is(':checked')) self.whereClause += " AND " + insurer_levels + "= 'OP'";
-            if ( $("#rbType4").is(':checked')) self.whereClause += " AND " + insurer_levels + "= 'All'";
+        var insurer = "";
+        if ( $("#select_type").val() != '') { 
+            insurer = $("#select_type").val()
+
+            if ( $("#cbType1").is(':checked')) self.whereClause += " AND " + insurer.concat(" Behavioral Health Assessment'='Yes'");
+            if ( $("#cbType2").is(':checked')) self.whereClause += " AND " + insurer.concat(" Medically Assisted Detoxification'='Yes'");
+            //if ( $("#cbType3").is(':checked')) self.whereClause += " AND " + insurer.concat(" Outpatient'='Yes'");
+            //if ( $("#cbType4").is(':checked')) self.whereClause += " AND " + insurer.concat(" Intensive Outpatient'='Yes'");
+            //if ( $("#cbType5").is(':checked')) self.whereClause += " AND " + insurer.concat(" Inpatient'='Yes'");
+            console.log(self.whereClause)
 
         }    
         
@@ -302,7 +304,7 @@
 
     MapsLib.prototype.getList = function(whereClause) {
         var self = this;
-        var selectColumns = "'Provider/Facility', 'Full Address'";
+        var selectColumns = "'Provider Name', 'Full Address'";
 
         self.query({ 
           select: selectColumns, 

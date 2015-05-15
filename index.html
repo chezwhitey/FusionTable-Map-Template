@@ -60,24 +60,24 @@
 
             <br />
             <h4>
-              Insurance Company
+              Health Insurance Provider
             </h4>
             <label>
               <select id='select_type'>
-                <option value=''>Insurer</option>
-                <option value="'AetnaLevels'">Aetna</option>
-                <option value='BCBSLevels'>BCBS</option>
-                <option value='CignaLevels-HealthSpringLevels'>Cigna-HealthSpring</option>
-                <option value='CCAILevels'>CCAI</option>
-                <option value='CountyCareLevels'>CountyCare</option>
-                <option value='HealthAllianceConnectLevels'>Health Alliance Connect</option>
-                <option value='HumanaLevels'>Humana</option>
-                <option value='IlliniCareLevels'>IlliniCare</option>
-                <option value='MeridianLevels'>Meridian</option>
-                <option value='MolinaLevels'>Molina</option>
-                <option value='OtherLevels'>Other</option>
+                <option value=''>Health Insurance Provider</option>
+                <option value="'Aetna">Aetna</option>
+                <option value="'BCBS">BCBS</option>
+                <option value="'Cigna-HealthSpring">Cigna-HealthSpring</option>
+                <option value="'CCAI">CCAI</option>
+                <option value="'CountyCare">CountyCare</option>
+                <option value="'HealthAllianceConnect">Health Alliance Connect</option>
+                <option value="'Humana">Humana</option>
+                <option value="'IlliniCare">IlliniCare</option>
+                <option value="'Meridian">Meridian</option>
+                <option value="'Molina">Molina</option>
+                <option value="'Other">Other</option>
               </select>
-            </label>      
+            </label>
 
             <h4>
               Level of Care
@@ -85,33 +85,35 @@
 
               <ul class='inputs-list unstyled'>
                 <li>
-                  <label class='radio inline'>
-                    <input type='radio' name='types' id='rbType1' checked />
-                    <span class='filter-box filter-blue'></span>
-                    Residential
+                  <label class='checkbox inline'>
+                    <input type='checkbox' name='types' id='cbType1' checked />
+                    Behavioral Health Assessment
                   </label>
                 </li>
                 <li>
-                  <label class='radio inline'>
-                    <input type='radio' name='types' id='rbType2' />
-                    <span class='filter-box filter-green'></span>
-                    Inpatient
+                  <label class='checkbox inline'>
+                    <input type='checkbox' name='types' id='cbType2' />
+                    Medically Assisted Detoxification
                   </label>
                 </li>
                 <li>
-                  <label class='radio inline'>
-                    <input type='radio' name='types' id='rbType3' />
-                    <span class='filter-box filter-red'></span>
+                  <label class='checkbox inline'>
+                    <input type='checkbox' name='types' id='cbType3' />
                     Outpatient
                   </label>
                 </li>
                 <li>
-                  <label class='radio inline'>
-                    <input type='radio' name='types' id='rbType4' />
-                    <span class='filter-box filter-purple'></span>
-                    All Levels of Care
+                  <label class='checkbox inline'>
+                    <input type='checkbox' name='types' id='cbType4' />
+                    Intensive Outpatient
                   </label>
                 </li>
+                <li>
+                  <label class='checkbox inline'>
+                    <input type='checkbox' name='types' id='cbType5' />
+                    Inpatient
+                  </label>
+                </li>                
               </ul>
 
             <br />
@@ -160,7 +162,8 @@
         
         $(function() {
           var myMap = new MapsLib({
-            fusionTableId:      "1WotvAIHo8d_XaNx-7WTMqIOyr8aRbkOZX0Mz9KC-",
+            fusionTableId:      "1bC3nAuBnD3rJ6YnkhWN_uti9XmFr3-4roobRxu4J",
+            //fusionTableId:      "1WotvAIHo8d_XaNx-7WTMqIOyr8aRbkOZX0Mz9KC-",
             //fusionTableId:      "1l0sjG9t0AvdATL9xxuHxHtvHRoNLnRMwaWFGsJsn",
             googleApiKey:       "AIzaSyAP_eLp19O3ihapPjFYdxEB3B51ZCXD8_s",
             locationColumn:     "'Full Address'",
