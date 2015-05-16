@@ -168,8 +168,7 @@
             if ( $("#cbType3").is(':checked')) self.whereClause += " AND " + insurer.concat(" Outpatient'='Yes'");
             if ( $("#cbType4").is(':checked')) self.whereClause += " AND " + insurer.concat(" Intensive Outpatient'='Yes'");
             if ( $("#cbType5").is(':checked')) self.whereClause += " AND " + insurer.concat(" Inpatient'='Yes'");
-            console.log(self.whereClause)
-
+            
         }    
         
         //-----end of custom filters-----
