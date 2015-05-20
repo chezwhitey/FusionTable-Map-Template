@@ -64,11 +64,11 @@
         $("#result_box").hide();
 
         //-----custom initializers-----
-        $("#cbType1").prop("checked", false);
-        $("#cbType2").prop("checked", false);
-        $("#cbType3").prop("checked", false);
-        $("#cbType4").prop("checked", false);
-        $("#cbType5").prop("checked", false);        
+        $("#cbAssessment").prop("checked", false);
+        $("#cbDetox").prop("checked", false);
+        $("#cbInpatient").prop("checked", false);        
+        $("#cbIntensiveOutpatient").prop("checked", false);
+        $("#cbOutpatient").prop("checked", false);
         //-----end of custom initializers-----
 
         //run the default search when page loads
@@ -163,11 +163,11 @@
         if ( $("#select_type").val() != '') { 
             insurer = $("#select_type").val()
 
-            if ( $("#cbType1").is(':checked')) self.whereClause += " AND " + insurer.concat(" Behavioral Health Assessment'='Yes'");
-            if ( $("#cbType2").is(':checked')) self.whereClause += " AND " + insurer.concat(" Medically Assisted Detoxification'='Yes'");
-            if ( $("#cbType3").is(':checked')) self.whereClause += " AND " + insurer.concat(" Outpatient'='Yes'");
-            if ( $("#cbType4").is(':checked')) self.whereClause += " AND " + insurer.concat(" Intensive Outpatient'='Yes'");
-            if ( $("#cbType5").is(':checked')) self.whereClause += " AND " + insurer.concat(" Inpatient'='Yes'");
+            if ( $("#cbAssessment").is(':checked')) self.whereClause += " AND " + insurer.concat(" Behavioral Health Assessment'='Yes'");
+            if ( $("#cbDetox").is(':checked')) self.whereClause += " AND " + insurer.concat(" Medically Assisted Detoxification'='Yes'");
+            if ( $("#cbInpatient").is(':checked')) self.whereClause += " AND " + insurer.concat(" Inpatient'='Yes'");
+            if ( $("#cbIntensiveOutpatient").is(':checked')) self.whereClause += " AND " + insurer.concat(" Intensive Outpatient'='Yes'");
+            if ( $("#cbOutpatient").is(':checked')) self.whereClause += " AND " + insurer.concat(" Outpatient'='Yes'");
             
         }    
         
