@@ -203,9 +203,7 @@
         if ( $("#cbType11").is(':checked')) self.whereClause += " AND " + (" 'Parenting Classes'='Yes'");
         if ( $("#cbType12").is(':checked')) self.whereClause += " AND " + (" 'Treatment Readiness Groups'='Yes'");
         if ( $("#cbType13").is(':checked')) self.whereClause += " AND " + (" 'Drunk Driving'='Yes'");
-        if ( $("#cbType14").is(':checked')) self.whereClause += " AND " + (" 'Adolescent'='Yes'");      
-        console.log(self.whereClause)            
-    
+        if ( $("#cbType14").is(':checked')) self.whereClause += " AND " + (" 'Adolescent'='Yes'");          
 
 
         //-----end of custom filters-----
