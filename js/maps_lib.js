@@ -180,7 +180,7 @@
         var insurer = "";
         if ( $("#select_type").val() != '') { 
             insurer = $("#select_type").val()
-            self.whereClause += " AND " + insurer + " = 'Yes' "
+            self.whereClause += " AND " + insurer + " IN ('Yes','yes') " 
         }    
     
 
