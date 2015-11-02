@@ -175,36 +175,14 @@
         self.whereClause = self.locationColumn + " not equal to ''";
         
         //-----custom filters-----
+
+        //--Insurance provider dropdown-- 
         var insurer = "";
         if ( $("#select_type").val() != '') { 
             insurer = $("#select_type").val()
-
-            if ( $("#cbAssessment").is(':checked')) self.whereClause += " AND " + insurer.concat(" Behavioral Health Assessment'='Yes'");
-            if ( $("#cbDetox").is(':checked')) self.whereClause += " AND " + insurer.concat(" Medically Assisted Detoxification'='Yes'");
-            if ( $("#cbInpatient").is(':checked')) self.whereClause += " AND " + insurer.concat(" Inpatient'='Yes'");
-            if ( $("#cbIntensiveOutpatient").is(':checked')) self.whereClause += " AND " + insurer.concat(" Intensive Outpatient'='Yes'");
-            if ( $("#cbOutpatient").is(':checked')) self.whereClause += " AND " + insurer.concat(" Outpatient'='Yes'");
-            
+            self.whereClause += " AND " + insurer + " = 'Yes' "
         }    
-        
-
-        //------Specific Service checkboxes---------
-        
-        if ( $("#cbType1").is(':checked')) self.whereClause  += " AND 'Recovery / Halfway Homes'='Yes'";
-        if ( $("#cbType2").is(':checked')) self.whereClause  += " AND 'Cognitive Behavioral Therapy'='Yes'";
-        if ( $("#cbType3").is(':checked')) self.whereClause  += " AND 'Medication-Assisted Treatment'='Yes'";
-        if ( $("#cbType4").is(':checked')) self.whereClause  += " AND 'Mental Illness and Substance Abuse (MISA)'='Yes'";
-        if ( $("#cbType5").is(':checked')) self.whereClause  += " AND 'Veteran-specific'='Yes'";
-        if ( $("#cbType6").is(':checked')) self.whereClause  += " AND 'Trauma-informed'='Yes'";
-        if ( $("#cbType7").is(':checked')) self.whereClause  += " AND 'Individual counseling'='Yes'";
-        if ( $("#cbType8").is(':checked')) self.whereClause  += " AND 'Community meetings'='Yes'";
-        if ( $("#cbType9").is(':checked')) self.whereClause  += " AND 'Domestic Violence Treatment'='Yes'";
-        if ( $("#cbType10").is(':checked')) self.whereClause += " AND 'Anger Management'='Yes'";
-        if ( $("#cbType11").is(':checked')) self.whereClause += " AND 'Parenting Classes'='Yes'";
-        if ( $("#cbType12").is(':checked')) self.whereClause += " AND 'Treatment Readiness Groups'='Yes'";
-        if ( $("#cbType13").is(':checked')) self.whereClause += " AND 'Drunk Driving'='Yes'";
-        if ( $("#cbType14").is(':checked')) self.whereClause += " AND 'Adolescent'='Yes'";          
-
+    
 
         //-----end of custom filters-----
 
@@ -343,7 +321,7 @@
 
     MapsLib.prototype.getList = function(whereClause) {
         var self = this;
-        var selectColumns = "'Provider Name', 'Full Address'";
+        var selectColumns = "'Organization Name', 'Organization Address'";
 
         self.query({ 
           select: selectColumns, 

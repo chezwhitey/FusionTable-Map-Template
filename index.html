@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
   <head>
-    <title>Map of TASC Medicaid Managed Care Resources</title>
+    <title>Searchable Resource Map</title>
     <meta charset='utf-8' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta content='' name='description' />
@@ -23,7 +23,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class='navbar-brand' href='index.html'>Searchable Map of TASC Medicaid Managed Care Resources</a>
+          <a class='navbar-brand' href='index.html'>Searchable Resource Map</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -60,166 +60,33 @@
 
             <br />
             <h4>
-              Health Insurance Provider
+              Insurance Provider
             </h4>
             <label>
               <select id='select_type'>
                 <option value=''>Health Insurance Provider</option>
-                <option value="'Aetna">Aetna</option>
-                <option value="'BCBS">BCBS</option>
-                <option value="'Cigna-HealthSpring">Cigna-HealthSpring</option>
-                <option value="'CCAI">CCAI</option>
-                <option value="'CountyCare">CountyCare</option>
-                <option value="'HealthAllianceConnect">Health Alliance Connect</option>
-                <option value="'Humana">Humana</option>
-                <option value="'IlliniCare">IlliniCare</option>
-                <option value="'Meridian">Meridian</option>
-                <option value="'Molina">Molina</option>
-                <option value="'Other">Other</option>
+                <option value="'Self-payment'">Self-payment</option>
+                <option value="'Sliding Fee Scale'">Sliding Fee Scale</option>
+                <option value="'Private Health Insurance'">Private Health Insurance</option>
+                <option value="'Military Insurance'">Military Insurance</option>
+                <option value="'Medicare'">Medicare</option>
+                <option value="'Medicaid'">Medicaid</option>
+                <option value="'Medicaid: Aetna'">Medicaid: Aetna</option>
+                <option value="'Medicaid: Blue Cross Blue Shield'">Medicaid: Blue Cross Blue Shield</option>
+                <option value="'Medicaid: Cigna/HealthSpring'">Medicaid: Cigna/HealthSpring</option>
+                <option value="'Medicaid: Community Care Alliance of Illinois (CCAI)'">Medicaid: Community Care Alliance of Illinois (CCAI)</option>
+                <option value="'Medicaid: CountyCare'">Medicaid: CountyCare</option>
+                <option value="'Medicaid: Harmony/Beacon Health Strategies'">Medicaid: Harmony/Beacon Health Strategies</option>
+                <option value="'Medicaid: Humana (Managed Care Plan)'">Medicaid: Humana (Managed Care Plan)</option>
+                <option value="'Medicaid: IlliniCare/Cenpatico'">Medicaid: IlliniCare/Cenpatico</option>
+                <option value="'Medicaid: Family Health Network'">Medicaid: Family Health Network</option>
+                <option value="'Medicaid: Other'">Medicaid: Other</option>
+                <option value="'Uninsured Accepted'">Uninsured Accepted</option>
+                <option value="'Other insurance or payment discussion'">Other insurance or payment discussion</option>
               </select>
             </label>
 
-            <h4>
-              Level of Care
-            </h4>
-
-              <ul class='inputs-list unstyled'>
-                <li>
-                  <label class='checkbox inline'>
-                    <input type='checkbox' name='types' id='cbAssessment' checked />
-                    Behavioral Health Assessment
-                  </label>
-                </li>
-                <li>
-                  <label class='checkbox inline'>
-                    <input type='checkbox' name='types' id='cbDetox' />
-                    Medically Assisted Detoxification
-                  </label>
-                </li>
-                <li>
-                  <label class='checkbox inline'>
-                    <input type='checkbox' name='types' id='cbInpatient' />
-                    Inpatient
-                  </label>
-                </li>                
-                <li>
-                  <label class='checkbox inline'>
-                    <input type='checkbox' name='types' id='cbIntensiveOutpatient' />
-                    Intensive Outpatient
-                  </label>
-                </li>
-                <li>
-                  <label class='checkbox inline'>
-                    <input type='checkbox' name='types' id='cbOutpatient' />
-                    Outpatient
-                  </label>
-                </li>
-              </ul>
-
-
-        <h4>
-          Service Provided
-        </h4>
-        <ul class='inputs-list unstyled'>
-          <li>
-            <label class='checkbox inline'>
-              <input type='checkbox' id='cbType1' />
-              <span class='filter-box filter-blue'></span>
-              Recovery/Halfway Home
-            </label>
-          </li>
-          <li>
-            <label class='checkbox inline'>
-              <input type='checkbox' id='cbType2' />
-              <span class='filter-box filter-green'></span>
-              Cognitive Behavioral Therapy
-            </label>
-          </li>
-          <li>
-            <label class='checkbox inline'>
-              <input type='checkbox' id='cbType3' />
-              <span class='filter-box filter-red'></span>
-              Medication-Assisted Treatment
-            </label>
-          </li>
-           <li>
-            <label class='checkbox inline'>
-              <input type='checkbox' id='cbType4' />
-              <span class='filter-box filter-yellow'></span>
-              Mental Illness And Substance Abuse (MISA)
-            </label>
-          </li>
-           <li>
-            <label class='checkbox inline'>
-              <input type='checkbox' id='cbType5' />
-              <span class='filter-box filter-purple'></span>
-              Veteran-specific
-            </label>
-          </li>
-           <li>
-            <label class='checkbox inline'>
-              <input type='checkbox' id='cbType6' />
-              <span class='filter-box filter-blue'></span>
-              Trauma-informed
-            </label>
-          </li>
-           <li>
-            <label class='checkbox inline'>
-              <input type='checkbox' id='cbType7' />
-              <span class='filter-box filter-green'></span>
-              Individual Counseling
-            </label>
-          </li>
-           <li>
-            <label class='checkbox inline'>
-              <input type='checkbox' id='cbType8' />
-              <span class='filter-box filter-red'></span>
-              Community meetings(Alcoholics/Narcotics Anonymous,etc.)
-            </label>
-          </li>
-           <li>
-            <label class='checkbox inline'>
-              <input type='checkbox' id='cbType9' />
-              <span class='filter-box filter-yellow'></span>
-              Domestic Violence Treatment
-            </label>
-          </li>
-           <li>
-            <label class='checkbox inline'>
-              <input type='checkbox' id='cbType10' />
-              <span class='filter-box filter-purple'></span>
-              Anger Management
-            </label>
-          </li>
-           <li>
-            <label class='checkbox inline'>
-              <input type='checkbox' id='cbType11' />
-              <span class='filter-box filter-blue'></span>
-              Parenting Classes
-            </label>
-          </li>
-           <li>
-            <label class='checkbox inline'>
-              <input type='checkbox' id='cbType12' />
-              <span class='filter-box filter-green'></span>
-              Treatment readiness groups
-            </label>
-          </li>
-           <li>
-            <label class='checkbox inline'>
-              <input type='checkbox' id='cbType13' />
-              <span class='filter-box filter-red'></span>
-              Drunk Driving
-            </label>
-          </li>
-           <li>
-            <label class='checkbox inline'>
-              <input type='checkbox' id='cbType14' />
-              <span class='filter-box filter-yellow'></span>
-              Adolescent
-            </label>
-          </li>
-        </ul>
+        
 
             <br />
             <a class='btn btn-primary' id='search' href='#'>
@@ -267,9 +134,9 @@
         
         $(function() {
           var myMap = new MapsLib({
-            fusionTableId:      "1bC3nAuBnD3rJ6YnkhWN_uti9XmFr3-4roobRxu4J",
+            fusionTableId:      "1XIWB_vwBFPgcfaJQ_arhX2RydifARWgrERFYBzeH",
             googleApiKey:       "AIzaSyAP_eLp19O3ihapPjFYdxEB3B51ZCXD8_s",
-            locationColumn:     "'Full Address'",
+            locationColumn:     "'Organization Address'",
             map_center:         [41.8781136, -87.66677856445312],
             locationScope:      "",
           });
