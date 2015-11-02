@@ -358,7 +358,7 @@
                   <br />\
                   " + data[row][1] + "\
                   <br />\
-                  <a href=\"" + data[row][2] + "\">" + data[row][2] + "</a>\
+                  <a href=\"http://" + data[row][2] + "\">" + data[row][2] + "</a>\
                   <br />\
                   " + data[row][3] + "\
                   <br />\
