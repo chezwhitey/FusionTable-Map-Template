@@ -182,7 +182,14 @@
             insurer = $("#select_type").val()
             self.whereClause += " AND " + insurer + " IN ('Yes','yes') " 
         }    
-    
+
+        //--Level of Care dropdown-- 
+        var level_of_care = "";
+        if ( $("#care_select_type").val() != '') { 
+            level_of_care = $("#care_select_type").val()
+            self.whereClause += " AND " + level_of_care + " IN ('Yes','yes') " 
+        }    
+                
 
         //-----end of custom filters-----
 
